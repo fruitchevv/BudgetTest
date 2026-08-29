@@ -7,6 +7,12 @@ from http import HTTPStatus
 from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 from datetime import datetime
 
+if hasattr(sys.stdout, "reconfigure"):
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
+
 PORT = 1000
 DB_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "budget.db")
 STATIC_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "static")
@@ -451,12 +457,12 @@ def run(server_class=ThreadingHTTPServer, handler_class=BudgetRequestHandler, po
     
     server_address = ("0.0.0.0", port)
     httpd = server_class(server_address, handler_class)
-    print(f"==================================================")
-    print(f" Budget Application Server is running!")
+    print("==================================================")
+    print(f" FruitMoney Application Server is running!")
     print(f" Access in your browser at: http://localhost:{port}")
     print(f" Data is saved in: {DB_FILE}")
-    print(f" Press Ctrl+C to stop the server.")
-    print(f"==================================================")
+    print(" Press Ctrl+C to stop the server.")
+    print("==================================================")
     sys.stdout.flush()
     try:
         httpd.serve_forever()

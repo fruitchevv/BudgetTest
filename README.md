@@ -1,8 +1,8 @@
-# 💰 SmartBudget - Personal Finance & Budget Tracker
+# 🍉 FruitMoney - Personal Finance & Budget Tracker
 
 A modern, web-based budget application with persistent data storage running on **Port 1000**.
 
-![SmartBudget Web App](https://img.shields.io/badge/Port-1000-blue) ![Python](https://img.shields.io/badge/Python-3.x-green) ![Storage](https://img.shields.io/badge/Database-SQLite-orange)
+![FruitMoney Web App](https://img.shields.io/badge/Port-1000-blue) ![Python](https://img.shields.io/badge/Python-3.x-green) ![Storage](https://img.shields.io/badge/Database-SQLite-orange)
 
 ## 🚀 Quick Start
 

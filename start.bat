@@ -1,6 +1,6 @@
 @echo off
 echo ===================================================
-echo  Starting SmartBudget Web Application on Port 1000
+echo  🍉 Starting FruitMoney Web Application on Port 1000
 echo ===================================================
 echo.
 echo Opening http://localhost:1000 in your browser...

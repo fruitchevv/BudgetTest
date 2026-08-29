@@ -1,4 +1,4 @@
-// SmartBudget Client Application Controller
+// FruitMoney Client Application Controller
 
 const EXPENSE_CATEGORIES = [
   "Housing & Rent",
