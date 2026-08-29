@@ -1,16 +1,44 @@
 :root {
-  --primary: #4f46e5;
-  --primary-hover: #4338ca;
-  --primary-light: #eef2ff;
-  --primary-border: #c7d2fe;
+  --primary: #1C6CFF;
+  --primary-hover: #1557d1;
+  --primary-light: rgba(28, 108, 255, 0.15);
+  --primary-border: rgba(28, 108, 255, 0.3);
   
-  --success: #10b981;
-  --success-bg: #ecfdf5;
-  --success-text: #047857;
+  --success: #00CC4B;
+  --success-bg: rgba(0, 204, 75, 0.15);
+  --success-text: #00CC4B;
   
-  --danger: #ef4444;
-  --danger-bg: #fef2f2;
-  --danger-text: #b91c1c;
+  --danger: #FF4433;
+  --danger-bg: rgba(255, 68, 51, 0.15);
+  --danger-text: #FF4433;
+
+  --warning: #FECE4C;
+  --warning-bg: rgba(254, 206, 76, 0.15);
+  --warning-text: #FECE4C;
+
+  --info: #1C6CFF;
+  --info-bg: rgba(28, 108, 255, 0.15);
+
+  --bg-main: #000814;
+  --bg-card: #001533;
+  --text-main: rgba(255, 255, 255, 0.95);
+  --text-muted: #7F8BA4;
+  --text-light: #597CAA;
+  --border-color: #011E42;
+  --border-light: rgba(255, 255, 255, 0.05);
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 8px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 16px 24px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 24px 32px rgba(0, 0, 0, 0.6);
+  
+  --font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
 
   --warning: #f59e0b;
   --warning-bg: #fffbeb;
@@ -86,7 +114,7 @@ body {
 
 .logo-icon {
   font-size: 2rem;
-  background: linear-gradient(135deg, #eef2ff, #e0e7ff);
+  background: var(--bg-card);
   padding: 8px 12px;
   border-radius: var(--radius-md);
   border: 1px solid var(--primary-border);
@@ -95,7 +123,7 @@ body {
 .brand h1 {
   font-size: 1.5rem;
   font-weight: 800;
-  color: #1e1b4b;
+  color: var(--text-main);
   letter-spacing: -0.5px;
 }
 
@@ -169,23 +197,23 @@ body {
 }
 
 .btn-secondary {
-  background: #f1f5f9;
-  color: #334155;
+  background: rgba(255,255,255,0.05);
+  color: var(--text-main);
   border-color: var(--border-color);
 }
 .btn-secondary:hover {
-  background: #e2e8f0;
-  color: #0f172a;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
 }
 
 .btn-outline {
-  background: #ffffff;
-  color: #334155;
+  background: var(--bg-card);
+  color: var(--text-main);
   border-color: var(--border-color);
 }
 .btn-outline:hover {
   background: var(--bg-main);
-  border-color: #cbd5e1;
+  border-color: rgba(255,255,255,0.2);
 }
 
 .btn-ghost {
@@ -195,7 +223,7 @@ body {
   padding: 6px 10px;
 }
 .btn-ghost:hover {
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(255,255,255,0.1);
   color: var(--text-main);
 }
 
@@ -210,7 +238,7 @@ body {
   transition: background 0.1s;
 }
 .btn-icon:hover {
-  background: #e2e8f0;
+  background: rgba(255,255,255,0.1);
   color: var(--text-main);
 }
 
@@ -296,7 +324,7 @@ body {
   background: var(--primary-light);
 }
 .metric-card.budget-overview .metric-icon {
-  background: #fef3c7;
+  background: rgba(254, 206, 76, 0.15);
 }
 
 .metric-info {
@@ -327,7 +355,7 @@ body {
   color: var(--danger-text);
 }
 .metric-card.balance h2 {
-  color: #1e1b4b;
+  color: var(--text-main);
 }
 
 .metric-sub {
@@ -379,7 +407,7 @@ body {
 .panel-header h3 {
   font-size: 1.15rem;
   font-weight: 700;
-  color: #1e293b;
+  color: var(--text-main);
 }
 
 .panel-desc {
@@ -412,7 +440,7 @@ body {
 
 .budget-category-title {
   font-weight: 600;
-  color: #334155;
+  color: var(--text-main);
 }
 
 .budget-spent-info {
@@ -428,7 +456,7 @@ body {
 .progress-bar-bg {
   width: 100%;
   height: 9px;
-  background: #f1f5f9;
+  background: rgba(255,255,255,0.05);
   border-radius: var(--radius-full);
   overflow: hidden;
   position: relative;
@@ -441,13 +469,13 @@ body {
 }
 
 .progress-bar-fill.safe {
-  background: linear-gradient(90deg, #10b981, #059669);
+  background: var(--success);
 }
 .progress-bar-fill.warning {
-  background: linear-gradient(90deg, #f59e0b, #d97706);
+  background: var(--warning);
 }
 .progress-bar-fill.danger {
-  background: linear-gradient(90deg, #ef4444, #dc2626);
+  background: var(--danger);
 }
 
 /* Chart Panel */
@@ -473,7 +501,7 @@ body {
   align-items: center;
   gap: 8px;
   font-size: 0.82rem;
-  color: #334155;
+  color: var(--text-main);
 }
 
 .legend-color {
@@ -542,7 +570,7 @@ body {
   background-color: #ffffff;
   font-family: inherit;
   font-size: 0.85rem;
-  color: #334155;
+  color: var(--text-main);
   outline: none;
   cursor: pointer;
 }
@@ -576,12 +604,12 @@ body {
   padding: 14px;
   font-size: 0.9rem;
   border-bottom: 1px solid var(--border-light);
-  color: #334155;
+  color: var(--text-main);
   vertical-align: middle;
 }
 
 .transactions-table tr:hover {
-  background: #f8fafc;
+  background: var(--bg-main);
 }
 
 .badge {
@@ -603,7 +631,7 @@ body {
 }
 
 .badge-category {
-  background: #f1f5f9;
+  background: rgba(255,255,255,0.05);
   color: #475569;
   font-size: 0.78rem;
   border: 1px solid #e2e8f0;
@@ -638,13 +666,13 @@ body {
   margin: 0 2px;
 }
 .table-action-btn:hover {
-  background: #e2e8f0;
+  background: rgba(255,255,255,0.1);
   color: var(--text-main);
 }
 .table-action-btn.delete-btn:hover {
   background: var(--danger-bg);
   color: var(--danger-text);
-  border-color: #fecaca;
+  border-color: rgba(255,68,51,0.3);
 }
 
 .empty-state {
@@ -673,7 +701,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(15, 23, 42, 0.6);
+  background: rgba(0, 8, 20, 0.85);
   backdrop-filter: blur(4px);
   display: flex;
   align-items: center;
@@ -684,7 +712,7 @@ body {
 }
 
 .modal-card {
-  background: #ffffff;
+  background: var(--bg-card);
   border-radius: var(--radius-lg);
   max-width: 500px;
   width: 100%;
@@ -704,13 +732,13 @@ body {
   align-items: center;
   padding: 20px 24px;
   border-bottom: 1px solid var(--border-color);
-  background: #f8fafc;
+  background: var(--bg-main);
 }
 
 .modal-header h3 {
   font-size: 1.2rem;
   font-weight: 700;
-  color: #1e293b;
+  color: var(--text-main);
 }
 
 .modal-subtitle {
@@ -753,7 +781,7 @@ form {
 .form-label {
   font-size: 0.82rem;
   font-weight: 600;
-  color: #334155;
+  color: var(--text-main);
 }
 
 .form-input {
@@ -837,7 +865,7 @@ form {
 .preset-chip {
   font-size: 0.75rem;
   padding: 4px 8px;
-  background: #f1f5f9;
+  background: rgba(255,255,255,0.05);
   border-radius: var(--radius-full);
   border: 1px solid var(--border-color);
   color: #475569;

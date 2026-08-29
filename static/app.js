@@ -34,8 +34,8 @@ const QUICK_PRESETS = [
 ];
 
 const CHART_COLORS = [
-  "#4f46e5", "#10b981", "#f59e0b", "#ef4444", "#8b5cf6",
-  "#06b6d4", "#ec4899", "#14b8a6", "#f97316", "#64748b"
+  "#1C6CFF", "#00CC4B", "#FECE4C", "#FF4433", "#BF5AF2",
+  "#32D74B", "#FF375F", "#64D2FF", "#FF9F0A", "#5E5CE6"
 ];
 
 // App State
@@ -375,13 +375,13 @@ function renderExpenseChart(categoryExpenses) {
   });
 
   // Center text inside donut
-  ctx.fillStyle = "#1e293b";
+  ctx.fillStyle = "rgba(255, 255, 255, 0.95)";
   ctx.font = "bold 16px Plus Jakarta Sans, sans-serif";
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
   ctx.fillText(formatCurrency(total), centerX, centerY - 6);
 
-  ctx.fillStyle = "#64748b";
+  ctx.fillStyle = "#7F8BA4";
   ctx.font = "11px Plus Jakarta Sans, sans-serif";
   ctx.fillText("Total Spent", centerX, centerY + 14);
 }
